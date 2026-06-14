@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L.V.M Mitramandal - Trips</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
+    ),
+    url("coverpage.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    min-height:100vh;
+}
+
+/* Back Button */
+
+.back{
+    padding:20px;
+}
+
+.back a{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#ff5f6d;
+
+    padding:10px 20px;
+
+    border-radius:25px;
+
+    transition:0.3s;
+}
+
+.back a:hover{
+
+    background:#ff3d52;
+}
+
+/* Header */
+
+.header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.header h1{
+
+    font-size:60px;
+
+    color:white;
+
+    text-shadow:0 4px 15px rgba(0,0,0,0.8);
+}
+
+.subtitle{
+
+    color:white;
+
+    font-size:18px;
+
+    margin-top:10px;
+}
+
+/* Grid */
+
+.main{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+    padding-bottom:50px;
+}
+
+/* Card */
+
+.card{
+
+    background:rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:20px;
+
+    padding:15px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+
+    transition:0.4s;
+}
+
+.card:hover{
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+}
+
+/* Images */
+
+.card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+}
+
+/* Text */
+
+.card h3{
+
+    color:white;
+
+    margin-top:15px;
+}
+
+.card p{
+
+    color:#e8e8e8;
+}
+
+/* Button */
+
+.btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#ff5f6d;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    margin-top:10px;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+
+    background:#ff3d52;
+
+    box-shadow:
+    0 0 20px rgba(255,95,109,0.7);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .header h1{
+        font-size:40px;
+    }
+
+}
+</style>
+</head>
+<body>
+
+<div class="back">
+    <a href="index.html">← Back</a>
+</div>
+
+<div class="header">
+
+    <h1>Our Trips</h1>
+
+    <p class="subtitle">
+        12 Trips • Hundreds of Photos • Countless Memories
+    </p>
+
+</div>
+
+<div class="main">
+
+    <div class="card">
+        <img src="kanheri caves pdf.jpeg" alt="">
+        <h3>Kanheri caves </h3>
+        
+        <a href="kanhericaves.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="trimbak.jpeg" alt="">
+        <h3>Trimbakeshwar Visit</h3>
+       
+        <a href="trimbak.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="villa.jpeg" alt="">
+        <h3>Villa Stay</h3>
+       
+        <a href="villa.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="bhivpuri .jpeg" alt="">
+        <h3>Bhivpuri waterfalls </h3>
+        
+        <a href="bhiv.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="gan2024.jpeg">
+        <h3>ganpati darshan 2024</h3>
+        
+        <a href="gan2024.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="gan2025.jpeg" alt="">
+        <h3>ganpati darshan 2025</h3>
+        
+        <a href="gan2025.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="jivdani2.jpeg" alt="">
+        <h3>jivdani temple visit </h3>
+        
+        <a href="jivdani.html" class="btn">View Photos</a>
+    </div>
+
+    
+
+    <div class="card">
+        <img src="iskcon .jpeg" alt="">
+        <h3>iskcon visit </h3>
+       
+        <a href="iskcon.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="maha.jpeg" alt="">
+        <h3>mahalaxmi temple visit </h3>
+        
+        <a href="maha.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="holi.jpeg" alt="">
+        <h3>Holi 2026</h3>
+        
+        <a href="holi.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="birht.jpeg" alt="">
+        <h3>Birthday celebrations</h3>
+        
+        <a href="birth.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="kala.jpeg" alt="">
+        <h3>kalaghoda festival </h3>
+        
+        <a href="kala.html" class="btn">View Photos</a>
+    </div>
+    <div class="card">
+        <img src="trip8.jpg" alt="">
+        <h3> Matheran </h3>
+       
+        <a href="matheran.html" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="trip14.jpg" alt="">
+        <h3>Kokan </h3>
+        <p>upcomming </p>
+        <a href="#" class="btn">View Photos</a>
+    </div>
+
+    <div class="card">
+        <img src="trip15.jpg" alt="">
+        <h3>kalsubai trek </h3>
+        <p>upcomming </p>
+        <a href="#" class="btn">View Photos</a>
+    </div>
+
+    
+
+    
+
+</div>
+
+</body>
+</html>
