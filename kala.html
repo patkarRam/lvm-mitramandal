@@ -7,210 +7,352 @@
 
 <style>
 
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
 
-    font-family:'Poppins',sans-serif;
+font-family:'Poppins',sans-serif;
 
-    background-image:
-    linear-gradient(
-        rgba(0,0,0,0.60),
-        rgba(0,0,0,0.60)
-    ),
-    url("coverpage.png");
+background:
+linear-gradient(
+rgba(0,0,0,.75),
+rgba(0,0,0,.85)
+),
+url("coverpage2.png");
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
 
-    min-height:100vh;
+min-height:100vh;
+
+color:white;
 }
 
-/* Back Button */
+/* BACK BUTTON */
 
 .back{
-    padding:20px;
+padding:25px;
 }
 
 .back a{
 
-    text-decoration:none;
+text-decoration:none;
 
-    color:white;
+color:white;
 
-    background:#ff5f6d;
+background:#111;
 
-    padding:10px 20px;
+padding:12px 22px;
 
-    border-radius:25px;
+border-radius:30px;
 
-    transition:0.3s;
+border:1px solid rgba(255,255,255,.08);
+
+transition:.3s;
 }
 
 .back a:hover{
 
-    background:#ff3d52;
+background:#1a1a1a;
+
+transform:translateY(-2px);
 }
 
-/* Header */
+/* HERO SECTION */
 
 .header{
 
-    text-align:center;
+width:min(1300px,92%);
 
-    padding:20px;
+margin:20px auto;
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:30px;
 }
 
-.header h1{
+.header img{
 
-    color:white;
+width:100%;
 
-    font-size:60px;
+height:500px;
 
-    text-shadow:0 4px 15px rgba(0,0,0,0.8);
+object-fit:cover;
+
+display:block;
 }
 
-.header p{
+.hero-overlay{
 
-    color:#e8e8e8;
+position:absolute;
+inset:0;
 
-    font-size:20px;
+background:
+linear-gradient(
+transparent,
+rgba(0,0,0,.85)
+);
+
+display:flex;
+
+align-items:flex-end;
+
+padding:40px;
 }
 
-/* Stats */
+.hero-overlay h1{
+
+font-size:clamp(2rem,5vw,4rem);
+
+font-weight:800;
+
+margin-bottom:10px;
+}
+
+.hero-overlay p{
+
+opacity:.85;
+
+font-size:1rem;
+}
+
+/* STATS */
 
 .stats{
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
+justify-content:center;
 
-    gap:60px;
+gap:60px;
 
-    margin:30px 0;
+flex-wrap:wrap;
 
-    color:white;
+margin:50px 0;
 
-    text-align:center;
-
-    flex-wrap:wrap;
+text-align:center;
 }
 
-/* Gallery */
+.stats h2{
+
+font-size:2.7rem;
+
+font-weight:700;
+}
+
+.stats p{
+
+opacity:.65;
+}
+
+/* STORY */
+
+.story{
+
+width:min(900px,90%);
+
+margin:0 auto 50px;
+
+background:#111;
+
+border:1px solid rgba(255,255,255,.08);
+
+padding:30px;
+
+border-radius:25px;
+}
+
+.story h2{
+
+margin-bottom:15px;
+}
+
+.story p{
+
+line-height:1.8;
+
+opacity:.8;
+}
+
+/* GALLERY */
 
 .gallery{
 
-    width:90%;
+width:min(1300px,92%);
 
-    margin:auto;
+margin:auto;
 
-    columns:3;
+columns:3;
 
-    column-gap:15px;
+column-gap:18px;
 }
 
 .gallery img{
 
-    width:100%;
+width:100%;
 
-    margin-bottom:15px;
+margin-bottom:18px;
 
-    border-radius:15px;
+border-radius:18px;
 
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+transition:.4s;
 
-    transition:0.3s;
+cursor:pointer;
 }
 
 .gallery img:hover{
 
-    transform:scale(1.03);
+transform:scale(1.02);
 
-    cursor:pointer;
+filter:brightness(1.05);
 }
 
-/* Video */
+/* VIDEO SECTION */
 
 .video-section{
 
-    text-align:center;
+text-align:center;
 
-    margin:60px 0;
-
-    color:white;
+margin:80px 0;
 }
 
-.video-btn{
+.video-section h2{
 
-    display:inline-block;
-
-    text-decoration:none;
-
-    background:#ff5f6d;
-
-    color:white;
-
-    padding:15px 25px;
-
-    border-radius:30px;
-
-    margin-top:15px;
-
-    transition:0.3s;
+margin-bottom:10px;
 }
 
-.video-btn:hover{
+.video-section p{
 
-    background:#ff3d52;
+opacity:.7;
+
+margin-bottom:20px;
 }
 
-/* Quote */
+.video-section video{
+
+max-width:90%;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+}
+
+/* QUOTE */
 
 .quote{
 
-    text-align:center;
+text-align:center;
 
-    color:white;
+font-size:1.4rem;
 
-    font-size:22px;
+font-weight:600;
 
-    font-style:italic;
+margin:60px 20px;
 
-    margin:50px 20px;
+opacity:.9;
 }
 
-/* Footer */
+/* FOOTER */
 
 .footer{
 
-    text-align:center;
+text-align:center;
 
-    color:white;
+padding:40px 20px;
 
-    padding:25px;
+margin-top:50px;
+
+border-top:1px solid rgba(255,255,255,.08);
 }
 
-/* Mobile */
+.footer p{
+
+opacity:.7;
+}
+
+/* ANIMATIONS */
+
+.gallery img{
+
+animation:fadeUp .7s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-    .gallery{
-        columns:1;
-    }
+.header img{
 
-    .header h1{
-        font-size:40px;
-    }
+height:300px;
+}
 
-} 
+.hero-overlay{
+
+padding:25px;
+}
+
+.hero-overlay h1{
+
+font-size:2rem;
+}
+
+.gallery{
+
+columns:1;
+}
+
+.stats{
+
+gap:25px;
+}
+
+.stats h2{
+
+font-size:2rem;
+}
+
+.story{
+
+padding:20px;
+}
+
+.quote{
+
+font-size:1.1rem;
+}
+
+}
 
 </style>
+
+
+
 </head>
 <body>
 
@@ -219,22 +361,39 @@ body{
 </div>
 
 <div class="header">
-    <h1> kalaghoda festival </h1>
+
+    <img src="kala.jpeg">
+
+    <div class="hero-overlay">
+
+        <div>
+            <h1>🎭 Kala Ghoda Festival</h1>
+
+<p>
+Art • Culture • Exploration
+</p>
+
+           
+
+        </div>
+
+    </div>
+
 </div>
 <div class="stats">
 
     <div>
-        <h2>14</h2>
+        <h2>4</h2>
         <p>Members</p>
     </div>
 
     <div>
-        <h2>50+</h2>
+        <h2>20+</h2>
         <p>Photos</p>
     </div>
 
     <div>
-        <h2>2025</h2>
+        <h2>2026</h2>
         <p>Year</p>
     </div>
 
@@ -281,7 +440,6 @@ body{
 
 <img src="WhatsApp Image 2026-06-13 at 7.49.01 PM (1).jpeg" alt="">
 <img src="WhatsApp Image 2026-06-13 at 7.49.01 PM.jpeg" alt="">
-
 </div>
 <div class="video-section">
 
