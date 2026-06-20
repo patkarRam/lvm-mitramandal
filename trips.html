@@ -7,192 +7,290 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
 
-    font-family:'Poppins',sans-serif;
+font-family:'Poppins',sans-serif;
 
-    background-image:
-    linear-gradient(
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.55)
-    ),
-    url("coverpage.png");
+background:
+linear-gradient(
+rgba(0,0,0,.75),
+rgba(0,0,0,.85)
+),
+url("coverpage2.png");
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
 
-    min-height:100vh;
+min-height:100vh;
+
+color:white;
 }
 
-/* Back Button */
+/* BACK BUTTON */
 
 .back{
-    padding:20px;
+padding:25px;
 }
 
 .back a{
 
-    text-decoration:none;
+text-decoration:none;
 
-    color:white;
+color:white;
 
-    background:#ff5f6d;
+background:#111;
 
-    padding:10px 20px;
+padding:12px 22px;
 
-    border-radius:25px;
+border-radius:30px;
 
-    transition:0.3s;
+border:1px solid rgba(255,255,255,.08);
+
+transition:.3s;
 }
 
 .back a:hover{
 
-    background:#ff3d52;
+background:#1a1a1a;
+
+transform:translateY(-2px);
 }
 
-/* Header */
+/* HEADER */
 
 .header{
 
-    text-align:center;
+text-align:center;
 
-    margin-bottom:40px;
+padding-top:60px;
+
+margin-bottom:30px;
 }
 
 .header h1{
 
-    font-size:60px;
+font-size:clamp(3rem,7vw,5rem);
 
-    color:white;
+font-weight:800;
 
-    text-shadow:0 4px 15px rgba(0,0,0,0.8);
+margin-bottom:10px;
 }
 
 .subtitle{
 
-    color:white;
+opacity:.75;
 
-    font-size:18px;
-
-    margin-top:10px;
+font-size:1rem;
 }
 
-/* Grid */
+/* STATS */
+
+.stats{
+
+display:flex;
+
+justify-content:center;
+
+gap:60px;
+
+flex-wrap:wrap;
+
+margin-bottom:60px;
+}
+
+.stats div{
+
+text-align:center;
+}
+
+.stats h2{
+
+font-size:2.7rem;
+
+font-weight:700;
+}
+
+.stats p{
+
+opacity:.65;
+}
+
+/* GRID */
 
 .main{
 
-    width:90%;
+width:min(1250px,90%);
 
-    margin:auto;
+margin:auto;
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
 
-    gap:25px;
+gap:28px;
 
-    padding-bottom:50px;
+padding-bottom:80px;
 }
 
-/* Card */
+/* CARD */
 
 .card{
 
-    background:rgba(255,255,255,0.12);
+background:#111;
 
-    backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.08);
 
-    border:1px solid rgba(255,255,255,0.2);
+border-radius:28px;
 
-    border-radius:20px;
+padding:18px;
 
-    padding:15px;
+overflow:hidden;
 
-    text-align:center;
+text-align:center;
 
-    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+transition:.35s;
 
-    transition:0.4s;
+animation:fadeUp .7s ease;
 }
 
 .card:hover{
 
-    transform:
-    translateY(-10px)
-    scale(1.03);
+transform:translateY(-10px);
+
+box-shadow:
+0 0 30px rgba(255,255,255,.08);
+
+border-color:
+rgba(255,255,255,.15);
 }
 
-/* Images */
+/* IMAGE */
 
 .card img{
 
-    width:100%;
+width:100%;
 
-    height:250px;
+height:280px;
 
-    object-fit:cover;
+object-fit:cover;
 
-    border-radius:15px;
+border-radius:18px;
+
+transition:.5s;
 }
 
-/* Text */
+.card:hover img{
+
+transform:scale(1.08);
+}
+
+/* TITLE */
 
 .card h3{
 
-    color:white;
+margin-top:18px;
 
-    margin-top:15px;
+font-size:1.4rem;
+
+font-weight:700;
 }
 
-.card p{
-
-    color:#e8e8e8;
-}
-
-/* Button */
+/* BUTTON */
 
 .btn{
 
-    display:inline-block;
+display:inline-block;
 
-    text-decoration:none;
+margin-top:15px;
 
-    color:white;
+padding:12px 24px;
 
-    background:#ff5f6d;
+text-decoration:none;
 
-    padding:12px 24px;
+color:white;
 
-    border-radius:30px;
+background:#111;
 
-    margin-top:10px;
+border:1px solid rgba(255,255,255,.08);
 
-    transition:0.3s;
+border-radius:30px;
+
+transition:.3s;
 }
 
 .btn:hover{
 
-    background:#ff3d52;
+background:#1a1a1a;
 
-    box-shadow:
-    0 0 20px rgba(255,95,109,0.7);
+transform:translateY(-2px);
 }
 
-/* Mobile */
+/* UPCOMING */
+
+.card p{
+
+margin-top:8px;
+
+opacity:.6;
+
+font-size:.9rem;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-    .header h1{
-        font-size:40px;
-    }
+.header{
+
+padding-top:40px;
+}
+
+.stats{
+
+gap:25px;
+}
+
+.stats h2{
+
+font-size:2rem;
+}
+
+.card img{
+
+height:220px;
+}
+
+.card h3{
+
+font-size:1.2rem;
+}
 
 }
 </style>
@@ -203,13 +301,39 @@ body{
     <a href="index.html">← Back</a>
 </div>
 
+
+
 <div class="header">
 
-    <h1>Our Trips</h1>
+    <h1>Memory Archive</h1>
 
     <p class="subtitle">
-        12 Trips • Hundreds of Photos • Countless Memories
+        Every trip tells a story.
     </p>
+
+</div>
+
+<div class="stats">
+
+    <div>
+        <h2>12+</h2>
+        <p>Trips</p>
+    </div>
+
+    <div>
+        <h2>500+</h2>
+        <p>Photos</p>
+    </div>
+
+    <div>
+        <h2>14</h2>
+        <p>Friends</p>
+    </div>
+
+    <div>
+        <h2>∞</h2>
+        <p>Memories</p>
+    </div>
 
 </div>
 
@@ -301,7 +425,7 @@ body{
         <a href="kala.html" class="btn">View Photos</a>
     </div>
     <div class="card">
-        <img src="trip8.jpg" alt="">
+        <img src="matheran.jpeg" alt="">
         <h3> Matheran </h3>
        
         <a href="matheran.html" class="btn">View Photos</a>
