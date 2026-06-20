@@ -6,223 +6,294 @@
 
 <title>L.V.M Mitramandal</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-
-    font-family:'Poppins',sans-serif;
-
-    background-image:
-    linear-gradient(
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.45)
-    ),
-    url("coverpage.png");
-
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-
-
-    min-height:100vh;
+font-family:'Outfit',sans-serif;
+background:#0b0b0b;
+color:white;
+overflow-x:hidden;
 }
 
-/* HEADER */
+/* HERO */
 
-.header{
+.hero{
+height:100vh;
 
-    text-align:center;
+background:
+linear-gradient(
+rgba(0,0,0,.25),
+rgba(0,0,0,.80)
+),
+url("coverpage2.png");
 
-    padding-top:80px;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+position:relative;
+overflow:hidden;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+
+animation:heroZoom 25s ease-in-out infinite alternate;
+}
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+
+background:
+radial-gradient(
+circle at center,
+rgba(0,0,0,.15),
+rgba(0,0,0,.65)
+);
+
+pointer-events:none;
+}
+.hero-content{
+max-width:900px;
+
+position:relative;
+z-index:2;
 }
 
-.header h1{
+.hero h1{
+font-size:clamp(3rem,8vw,6rem);
+font-weight:800;
+line-height:1;
+font-weight:800;
+letter-spacing:-3px;
+margin-bottom:15px;
+}
+.hero h1 span{
 
-    font-size:80px;
+margin-left:20px;
 
-    color:white;
-
-    text-shadow:0 4px 15px rgba(0,0,0,0.8);
-
-    margin-bottom:15px;
+display:inline-block;
 }
 
-.header p{
-
-    color:white;
-
-    font-size:24px;
-
-    text-shadow:0 2px 10px rgba(0,0,0,0.8);
+.hero p{
+font-size:1.3rem;
+opacity:.9;
+margin-bottom:20px;
 }
 
-/* MAIN CARDS */
+.hero-quote{
+font-size:1rem;
+opacity:.75;
+font-style:italic;
+margin-bottom:40px;
+}
 
-.main{
+.scroll{
+font-size:2rem;
+animation:bounce 1.5s infinite;
+}
 
-    display:flex;
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(10px);
+}
+}
 
-    justify-content:center;
+@keyframes heroZoom{
+0%{
+background-size:100%;
+}
+100%{
+background-size:105%;
+}
+}
+/* SECTION */
 
-    gap:40px;
+.section{
+padding:90px 8%;
+}
 
-    margin-top:80px;
+.title{
+font-size:3rem;
+font-weight:700;
+margin-bottom:40px;
+}
 
-    flex-wrap:wrap;
+/* FEATURED TRIP */
+
+.featured{
+position:relative;
+height:550px;
+border-radius:30px;
+overflow:hidden;
+cursor:pointer;
+}
+
+.featured img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.featured:hover img{
+transform:scale(1.08);
+}
+
+.featured-overlay{
+position:absolute;
+inset:0;
+
+background:
+linear-gradient(
+transparent,
+rgba(0,0,0,.85)
+);
+
+display:flex;
+align-items:flex-end;
+padding:40px;
+}
+
+.featured-overlay h2{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+/* CARDS */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
 }
 
 .card{
+background:#141414;
 
-    width:320px;
+border:1px solid rgba(255,255,255,.08);
 
-    padding:35px;
+border-radius:30px;
 
-    text-align:center;
+padding:40px;
 
-    border-radius:20px;
+text-decoration:none;
 
-    background:rgba(255,255,255,0.12);
+color:white;
 
-    backdrop-filter:blur(10px);
-
-    border:1px solid rgba(255,255,255,0.2);
-
-    box-shadow:0 8px 30px rgba(0,0,0,0.3);
-
-    transition:0.4s;
+transition:.35s;
 }
 
 .card:hover{
-
-    transform:
-    translateY(-10px)
-    scale(1.03);
+transform:translateY(-10px);
+border-color:#ff5f6d;
 }
 
-.card h2{
-
-    color:white;
-
-    font-size:32px;
-
-    margin-bottom:15px;
+.card h3{
+font-size:2rem;
+margin-bottom:15px;
 }
 
 .card p{
-
-    color:#ececec;
-
-    font-size:18px;
+opacity:.75;
+line-height:1.6;
 }
 
-/* BUTTON */
+/* MEMORY WALL */
 
-.btn{
+.memories{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
 
-    display:inline-block;
-
-    margin-top:20px;
-
-    padding:12px 28px;
-
-    background:#ff5f6d;
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:30px;
-
-    transition:0.3s;
+gap:20px;
 }
 
-.btn:hover{
-
-    background:#ff3d52;
-
-    box-shadow:
-    0 0 20px rgba(255,95,109,0.7);
+.memories img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
 }
 
-/* STATS */
-
-.stats{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:80px;
-
-    margin-top:90px;
-
-    color:white;
-
-    text-align:center;
-
-    flex-wrap:wrap;
+.memories img:hover{
+transform:scale(1.05);
 }
 
-.stats h2{
+/* QUOTE */
 
-    font-size:40px;
-}
-
-.stats p{
-
-    font-size:18px;
+.quote{
+padding:120px 20px;
+text-align:center;
+font-size:2rem;
+font-weight:600;
+line-height:1.6;
+color:#d6d6d6;
 }
 
 /* FOOTER */
 
-.footer{
+footer{
+padding:60px 20px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.08);
+}
 
-    text-align:center;
+footer h2{
+margin-bottom:10px;
+}
 
-    color:white;
-
-    margin-top:80px;
-
-    padding-bottom:30px;
+footer p{
+opacity:.7;
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
-    .header h1{
+.hero h1{
+font-size:4rem;
+}
 
-        font-size:45px;
-    }
+.title{
+font-size:2rem;
+}
 
-    .header p{
+.featured{
+height:350px;
+}
 
-        font-size:18px;
-    }
+.featured-overlay h2{
+font-size:2rem;
+}
 
-    .card{
+.quote{
+font-size:1.4rem;
+padding:80px 20px;
+}
 
-        width:85%;
-    }
+.section{
+padding:70px 20px;
+}
 
-    .stats{
-
-        gap:30px;
-    }
-
-    .stats h2{
-
-        font-size:30px;
-    }
 }
 
 </style>
@@ -230,85 +301,139 @@ body{
 
 <body>
 
-<!-- HEADER -->
+<!-- HERO -->
 
-<div class="header">
+<section class="hero">
 
-    <h1>L.V.M मित्रमंडळ</h1>
+<div class="hero-content">
 
-    <p>
-        Travel • Friendship • Memories 
-    </p>
+<h1>L.V.M  <span>मित्रमंडळ</span></h1>
+
+
+
+<p>
+Friends. Trips. Stories we'll tell forever.
+</p>
+
+<div class="hero-quote">
+"We didn't realize we were making memories,
+we just knew we were having fun."
+</div>
+
+<div class="scroll">↓</div>
 
 </div>
 
-<!-- CARDS -->
+</section>
 
-<div class="main">
+<!-- FEATURED TRIP -->
 
-    <div class="card">
+<section class="section">
 
-        <h2>Members</h2>
+<h2 class="title">
+Latest Memory
+</h2>
 
-        <p>
-            Meet all members of our group.
-        </p>
+<a href="trips.html">
 
-        <a href="members.html" class="btn">
-            View Members
-        </a>
+<div class="featured">
 
-    </div>
+<img src="latestmemory.jpeg" alt="Latest Trip">
 
-    <div class="card">
+<div class="featured-overlay">
 
-        <h2>Trips</h2>
+<div>
 
-        <p>
-            Explore all our adventures and memories.
-        </p>
+<h2>Trimbakeshwar temple visit </h2>
 
-        <a href="trips.html" class="btn">
-            View Trips
-        </a>
-
-    </div>
+<p>Faith • Friends • Blessings • Memories</p>
+</div>
 
 </div>
 
-<!-- STATS -->
+</div>
 
-<div class="stats">
+</a>
 
-    <div>
-        <h2>14+</h2>
-        <p>Members</p>
-    </div>
+</section>
 
-    <div>
-        <h2>12+</h2>
-        <p>Trips</p>
-    </div>
+<!-- EXPLORE -->
 
-    <div>
-        <h2>500+</h2>
-        <p>Photos</p>
-    </div>
+<section class="section">
 
-    <div>
-        <h2>3+</h2>
-        <p>Years Together</p>
-    </div>
+<h2 class="title">
+Explore
+</h2>
+
+<div class="grid">
+
+<a href="members.html" class="card">
+
+<h3>👥 Meet The Gang</h3>
+
+<p>
+The people behind every trip, every laugh and every unforgettable memory.
+</p>
+
+</a>
+
+<a href="trips.html" class="card">
+
+<h3>✈️ Explore Trips</h3>
+
+<p>
+Every destination, every adventure and every story we've created together.
+</p>
+
+</a>
 
 </div>
+
+</section>
+
+<!-- MEMORY WALL -->
+
+<section class="section">
+
+<h2 class="title">
+Memory Wall
+</h2>
+
+<div class="memories">
+
+<img src="funny1.jpeg" alt="">
+<img src="funny2.jpeg" alt="">
+<img src="funny3.jpeg" alt="">
+<img src="funny4.jpeg" alt="">
+<img src="funny5.jpeg" alt="">
+<img src="funny6.jpeg" alt="">
+<img src="funny7.jpeg" alt="">
+<img src="funny8.jpeg" alt="">
+
+</div>
+
+</section>
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+"Same friends. Different places.
+Same madness."
+
+</section>
 
 <!-- FOOTER -->
 
-<div class="footer">
+<footer>
 
-    ❤️ L.V.M Mitramandal
+<h2>❤️ L.V.M Mitramandal</h2>
 
-</div>
+<p>
+Travel • Friendship • Memories
+</p>
+
+</footer>
 
 </body>
 </html>
